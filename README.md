@@ -1,6 +1,3 @@
-
-# mini_katalog
-
 # Mini Katalog Flutter Uygulaması
 
 
@@ -14,15 +11,6 @@ Ayrıca sepet ve favoriler SharedPreferences kullanılarak cihazda kalıcı hale
 
 ##  Özellikler
 
-<<<<<<< HEAD
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# mini-katalog
-Flutter Mini Katalog Projesi
->>>>>>> 260b8ba7d774e0bbfda2c87c73da07eb48f054e1
-=======
 - Ürün listeleme
 - Ürün arama (search bar)
 - Favorilere ekleme / çıkarma
@@ -45,8 +33,8 @@ Flutter Mini Katalog Projesi
 
 ##  Flutter Sürümü
 
-- Flutter: 3.x (stable)
-- Dart: 3.x
+- Flutter: 3.41.9
+- Dart: 3.11.5
 
 ---
 
@@ -61,4 +49,4 @@ Flutter Mini Katalog Projesi
   Furkan AÇIKALIN
 
 ## Ekran Görüntüleri
->>>>>>> e736c97d9503fd51150b763f3e88edf7871f1cb9
+
