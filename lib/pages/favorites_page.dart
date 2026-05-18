@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/product.dart';
 
-class FavoritesPage extends StatelessWidget {
+class FavoritesPage extends StatefulWidget {
   final List<Product> allProducts;
   final List<int> favorites;
   final Function(Product) toggleFavorite;
@@ -16,19 +16,38 @@ class FavoritesPage extends StatelessWidget {
   });
 
   @override
+  State<FavoritesPage> createState() => _FavoritesPageState();
+}
+
+class _FavoritesPageState extends State<FavoritesPage> {
+  void addToCartWithMessage(Product product) {
+    widget.addToCart(product);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text("Ürün sepete eklendi 🛒"),
+        duration: Duration(seconds: 1),
+      ),
+    );
+  }
+
+  void removeFavorite(Product product) {
+    widget.toggleFavorite(product);
+
+    // 🔥 anında UI güncelle
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final favProducts = allProducts
-        .where((p) => favorites.contains(p.id))
+    final favProducts = widget.allProducts
+        .where((p) => widget.favorites.contains(p.id))
         .toList();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Favoriler ❤️"),
-      ),
+      appBar: AppBar(title: const Text("Favoriler ❤️")),
       body: favProducts.isEmpty
-          ? const Center(
-              child: Text("Henüz favori ürün yok"),
-            )
+          ? const Center(child: Text("Henüz favori ürün yok"))
           : ListView.builder(
               itemCount: favProducts.length,
               itemBuilder: (context, index) {
@@ -49,13 +68,13 @@ class FavoritesPage extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.shopping_cart),
                         onPressed: () {
-                          addToCart(product);
+                          addToCartWithMessage(product);
                         },
                       ),
                       IconButton(
                         icon: const Icon(Icons.favorite, color: Colors.red),
                         onPressed: () {
-                          toggleFavorite(product);
+                          removeFavorite(product);
                         },
                       ),
                     ],
