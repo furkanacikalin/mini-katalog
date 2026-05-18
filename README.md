@@ -1,17 +1,50 @@
-# mini_katalog
+# Mini Katalog Flutter Uygulaması
 
-A new Flutter project.
+##  Proje Açıklaması
+Mini Katalog, kullanıcıların ürünleri listeleyebildiği, arama yapabildiği, favorilere ekleyebildiği ve sepete ürün ekleyerek toplam fiyatı görebildiği bir Flutter mobil uygulamasıdır.  
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Ayrıca sepet ve favoriler SharedPreferences kullanılarak cihazda kalıcı hale getirilmiştir.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+##  Özellikler
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Ürün listeleme
+- Ürün arama (search bar)
+- Favorilere ekleme / çıkarma
+- Sepete ürün ekleme / silme
+- Sepet toplam fiyat hesaplama
+- Checkout (sipariş tamamlama ekranı)
+- Verilerin uygulama kapansa bile kaybolmaması (SharedPreferences)
+
+---
+
+##  Kullanılan Teknolojiler
+
+- Flutter
+- Dart
+- SharedPreferences
+- Material Design
+
+
+---
+
+##  Flutter Sürümü
+
+- Flutter: 3.x (stable)
+- Dart: 3.x
+
+---
+
+##  Kurulum ve Çalıştırma Adımları
+
+1. Projeyi klonlayın.
+2. Proje klasörüne gir: cd mini_katalog
+3. Paketleri indir: flutter pub get
+4. Uygulamayı çalıştır: flutter run
+
+## Geliştirici
+  Furkan AÇIKALIN
+
+## Ekran Görüntüleri
